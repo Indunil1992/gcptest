@@ -1,0 +1,110 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "6bb70e96-a124-44d6-8ce7-8d71534fa2e4": {
+        "id": "6bb70e96-a124-44d6-8ce7-8d71534fa2e4",
+        "parent": null,
+        "name": "gcptest",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "6fcec3bb-1b54-4fe9-a7b3-83834421f1c9"
+        ],
+        "isRemovable": false,
+        "filePath": "gcptest"
+      },
+      "6fcec3bb-1b54-4fe9-a7b3-83834421f1c9": {
+        "id": "6fcec3bb-1b54-4fe9-a7b3-83834421f1c9",
+        "parent": "6bb70e96-a124-44d6-8ce7-8d71534fa2e4",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "gcptest/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 1
+        },
+        "triggers": [
+          {
+            "resourceName": "pubsubpubsubindu1",
+            "config": {}
+          }
+        ]
+      },
+      "77b9fad7-d4bd-41f8-9bb2-114fb2a3f207": {
+        "id": "77b9fad7-d4bd-41f8-9bb2-114fb2a3f207",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.gcptestfunction = require(\"./gcptest/function.js\").handler;"
+      },
+      "ac60704c-d658-4112-8bbf-4a7a56a67b5f": {
+        "id": "ac60704c-d658-4112-8bbf-4a7a56a67b5f",
+        "parent": null,
+        "name": "main.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "main.py",
+        "code": "# This file is used to register all your cloud functions in GCP.\n# DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\n"
+      }
+    },
+    "rootNode": "6bb70e96-a124-44d6-8ce7-8d71534fa2e4",
+    "openFiles": [
+      "6fcec3bb-1b54-4fe9-a7b3-83834421f1c9"
+    ],
+    "currentFileId": "6fcec3bb-1b54-4fe9-a7b3-83834421f1c9",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      },
+      "pubsubpubsubindu1": {
+        "name": "pubsubpubsubindu1",
+        "type": "CloudPubSub",
+        "config": {
+          "mode": 0,
+          "topic": {
+            "name": "pubsubindu1",
+            "subscriptions": []
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "gcptest",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {},
+    "lastSave": 1576582883808
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "gcptest",
+      "url": "https://github.com/Indunil1992/gcptest"
+    }
+  }
+}
